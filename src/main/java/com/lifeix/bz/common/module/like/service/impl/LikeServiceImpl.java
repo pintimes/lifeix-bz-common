@@ -76,6 +76,7 @@ public class LikeServiceImpl implements LikeService {
 			}
 		}
 		Like dto = AdapterUtil.toT(po, Like.class);
+		
 		return dto;
 	}
 

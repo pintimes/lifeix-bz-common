@@ -1,13 +1,16 @@
 package com.lifeix.bz.common.module.like.model;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * 喜欢
  * 
- * @author gcc
+ * @author zengguangwei
  */ 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Like {
+	
+	private String app;
 
 	private String type;// 目标类型 player,post
 
@@ -17,7 +20,15 @@ public class Like {
 
 	private int unlikeNum;
 	
-	private Boolean like ; //null ,true like ,false unlike 
+	private Boolean like ; //null 未做任何处理,true like ,false unlike 
+	
+	public String getApp() {
+		return app;
+	}
+
+	public void setApp(String app) {
+		this.app = app;
+	}
 
 	public String getTarget() {
 		return target;

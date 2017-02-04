@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "like-groups")
+@Document(collection = "like_groups")
 public class LikeGroupPO {
 
 	@Id
-	private String id;
+	private String id;//subjectType#subjectId
 	
 	private List<String> targets;
 

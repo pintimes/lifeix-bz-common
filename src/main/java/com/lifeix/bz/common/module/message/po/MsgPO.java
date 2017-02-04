@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.lifeix.football.common.model.Label;
-import com.lifeix.football.common.model.Link;
 import com.lifeix.football.common.model.OperAction;
 import com.lifeix.football.common.model.User;
 

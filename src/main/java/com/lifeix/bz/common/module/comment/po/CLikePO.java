@@ -5,7 +5,7 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "comment-likes")
+@Document(collection = "comment_likes")
 public class CLikePO {
 
 	@Id

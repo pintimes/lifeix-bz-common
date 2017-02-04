@@ -6,13 +6,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * 用来存储Like Record
  * 
- * @author gcc
+ * @author zengguangwei
  */
-@Document(collection = "like-targets")
+@Document(collection = "like_targets")
 public class TargetLikedPO {
 	
 	@Id
-	private String id;// type#target
+	private String id;// subjectType#subjectId
 
 	private int likeNum;
 

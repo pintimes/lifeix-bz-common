@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.lifeix.bz.common.module.comment.dao.CommentDao;
 import com.lifeix.bz.common.module.comment.dao.CLikeDao;
+import com.lifeix.bz.common.module.comment.dao.CommentDao;
 
 @Service
 public class CLikeService {

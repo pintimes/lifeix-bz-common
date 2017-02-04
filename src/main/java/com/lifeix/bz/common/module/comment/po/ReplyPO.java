@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.lifeix.football.common.model.User;
 
-@Document(collection = "replies")
+@Document(collection = "comment_replies")
 public class ReplyPO {
 
 	@Id

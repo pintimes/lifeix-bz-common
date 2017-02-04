@@ -38,7 +38,8 @@ public class TargetLikedDao {
 	}
 
 	private void increaseLike(String name, String id) {
-		DBCollection collection = template.getCollection("targets");
+		String collectionName = template.getCollectionName(TargetLikedPO.class);
+		DBCollection collection = template.getCollection(collectionName);
 		BasicDBObject query = new BasicDBObject();
 		query.put("_id", id);
 		DBObject update = new BasicDBObject();
@@ -46,30 +47,4 @@ public class TargetLikedDao {
 		boolean upsert = true;
 		collection.findAndModify(query, null, null, false, update, false, upsert);
 	}
-	
-	
-//	public List<TargetLikedPO> getObjectedLiked(String objectId, String type, Date beginTime, Integer limit) {
-//		Query query = new Query();
-//		Criteria criteria = Criteria.where("objectId").is(objectId).andOperator(Criteria.where("type").is(type));
-//		if (beginTime != null) {
-//			Criteria createTime = Criteria.where("createTime").lt(beginTime);
-//			query.addCriteria(createTime);
-//		}
-//		Sort sort = new Sort(Sort.Direction.DESC, "createTime");
-//		query.with(sort);
-//		if (limit != null) {
-//			Math.max(0, limit);
-//			query.limit(limit);
-//		}
-//		query.addCriteria(criteria);
-//		return template.find(query, TargetLikedPO.class);
-//	}
-//
-//	public Long count(String objectId, String type) {
-//		Query query = new Query();
-//		Criteria criteria = Criteria.where("objectId").is(objectId).andOperator(Criteria.where("type").is(type));
-//		query.addCriteria(criteria);
-//		return template.count(query, TargetLikedPO.class);
-//
-//	}
 }
