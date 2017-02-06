@@ -19,7 +19,7 @@ import com.lifeix.football.common.model.Message;
 import com.lifeix.football.common.util.AuthorizationUtil;
 
 @RestController
-@RequestMapping(value = "/messages")
+@RequestMapping(value = "/message/messages")
 public class MsgController {
 
 	@Autowired

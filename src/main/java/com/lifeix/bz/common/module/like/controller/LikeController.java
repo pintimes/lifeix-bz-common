@@ -14,7 +14,7 @@ import com.lifeix.bz.common.module.like.model.Like;
 import com.lifeix.bz.common.module.like.service.LikeService;
 
 @RestController
-@RequestMapping(value = "/likes")
+@RequestMapping(value = "/like/likes")
 public class LikeController {
 
 	@Autowired
