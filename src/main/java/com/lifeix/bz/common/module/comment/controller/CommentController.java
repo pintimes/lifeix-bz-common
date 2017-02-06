@@ -26,7 +26,7 @@ import com.lifeix.football.common.util.AuthorizationUtil;
 import com.lifeix.football.common.util.StringUtil;
 
 @RestController
-@RequestMapping(value = "/comments")
+@RequestMapping(value = "/comment/comments")
 public class CommentController {
 
 	@Autowired

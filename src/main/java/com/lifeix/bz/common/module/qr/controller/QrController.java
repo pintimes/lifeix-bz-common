@@ -27,7 +27,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 public class QrController {
 
 	/**
-	 * 获得App启动参数
+	 * 暂时放在此处
 	 * 
 	 * @description
 	 * @author zengguangwei
@@ -35,7 +35,7 @@ public class QrController {
 	 *
 	 * @return
 	 */
-	@RequestMapping(value = "/qr", method = RequestMethod.GET,produces = MediaType.IMAGE_JPEG_VALUE)
+	@RequestMapping(value = "/likes/qr", method = RequestMethod.GET,produces = MediaType.IMAGE_JPEG_VALUE)
 	public byte[] getQRcode(@RequestParam(required = true, value = "link") String link) {
 		try {
 			return createQrcodeImage(link);
@@ -88,7 +88,6 @@ public class QrController {
 			baos.close();
 			return imageInByte;
 		} catch (IOException e) {
-			System.out.println(e.getMessage());
 		}
 		return null ;
 	}
