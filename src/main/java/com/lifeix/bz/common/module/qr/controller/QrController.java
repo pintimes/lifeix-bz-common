@@ -35,7 +35,7 @@ public class QrController {
 	 *
 	 * @return
 	 */
-	@RequestMapping(value = "/likes/qr", method = RequestMethod.GET,produces = MediaType.IMAGE_JPEG_VALUE)
+	@RequestMapping(value = "/like/qr", method = RequestMethod.GET,produces = MediaType.IMAGE_JPEG_VALUE)
 	public byte[] getQRcode(@RequestParam(required = true, value = "link") String link) {
 		try {
 			return createQrcodeImage(link);
