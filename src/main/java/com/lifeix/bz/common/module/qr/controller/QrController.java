@@ -46,7 +46,6 @@ public class QrController {
 	}
 	
 
-
 	/**
 	 * 生成二维码图片
 	 * 

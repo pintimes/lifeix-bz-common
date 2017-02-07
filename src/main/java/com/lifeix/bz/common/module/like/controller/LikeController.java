@@ -27,7 +27,7 @@ public class LikeController {
 		if (StringUtils.isEmpty(newSource)) {
 			newSource = getSource();
 		}
-		Like result = likeService.addLike(source, type, target, like);
+		Like result = likeService.addLike(newSource, type, target, like);
 		return result;
 	}
 
