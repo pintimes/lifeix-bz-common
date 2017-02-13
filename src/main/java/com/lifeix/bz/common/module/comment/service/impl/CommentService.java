@@ -260,16 +260,27 @@ public class CommentService {
 
 	public List<Count> countComment(String subjectType, List<String> subjectIds) {
 		if (CollectionUtils.isEmpty(subjectIds)) {
-			return  new ArrayList<>();
+			return  null;
 		}
 		Map<String, Long> map = commentDao.count(subjectType, subjectIds);
 		if (CollectionUtils.isEmpty(map)) {
-			return new ArrayList<>();
+			return null;
 		}
 
 		List<Count> list = new ArrayList<>();
 		map.forEach((String k, Long v) -> list.add(new Count(k, v)));
 		return list;
+	}
+	
+	private List<Count> getCounts(List<String> subjectIds){
+		List<Count> counts = new ArrayList<>();
+		for (String subjectId : subjectIds) {
+			Count count = new Count();
+			count.setKey(subjectId);
+			count.setNum(0);
+			counts.add(count);
+		}
+		return counts;
 	}
 
 }
